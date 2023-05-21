@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
@@ -36,3 +37,9 @@ yarn-error.log*
 next-env.d.ts
 
 .vscode
+=======
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+>>>>>>> 62a568d23b429d7f1409e0f840e7f6853496e583
