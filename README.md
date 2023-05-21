@@ -1,3 +1,6 @@
+# espooky
+The site for our wedding
+
 # Deploying to GitHub Pages
 
 This example supports deloying a statically exported Next.js application to GitHub Pages.
