@@ -1,16 +1,28 @@
+import { lordish } from 'app/fonts';
+
 import styles from './placeholder.module.css';
-import { lordish } from '../../fonts';
 
 type PlaceholderProps = {
   title: string,
 }
 
 const Placeholder = (props: PlaceholderProps) => (
-  <div className={styles.root}>
-    <h1 className={`${lordish.className} ${styles.title} `}>
-      {props.title}
-    </h1>
-  </div>
+  <section>
+    <video
+      className={styles.video}
+      autoPlay
+      loop
+      muted
+    >
+      <source src="/dancing-skeletons.webm" type="video/webm" />
+      <source src="/dancing-skeletons.mp4" type="video/mp4" />
+    </video>
+    <div className={styles.content}>
+      <h1 className={`${lordish.className} ${styles.title}`}>
+        {props.title}
+      </h1>
+    </div>
+  </section>
 )
 
 export default Placeholder;
