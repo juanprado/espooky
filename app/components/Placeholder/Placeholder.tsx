@@ -11,6 +11,7 @@ const Placeholder = (props: PlaceholderProps) => (
     <video
       className={styles.video}
       autoPlay
+      playsInline
       loop
       muted
     >
