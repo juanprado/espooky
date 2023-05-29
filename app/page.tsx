@@ -1,9 +1,7 @@
-import Link from 'next/link'
+import Placeholder from './components/Placeholder';
 
 const Home = () => (
-  <div>
-    Hello World! <Link href="/about">About</Link>
-  </div>
+  <Placeholder title="Coming Soon!!" />
 )
 
 export default Home;
