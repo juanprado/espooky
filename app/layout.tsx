@@ -1,3 +1,5 @@
+import { futura } from 'app/fonts';
+
 import './global.css';
 
 export default function RootLayout({
@@ -7,7 +9,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={futura.className}>{children}</body>
     </html>
   )
 }

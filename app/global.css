@@ -1,3 +1,8 @@
+:root {
+  --bone: #F4ECE0;
+  --dark-overlay: rgba(6, 4, 7, 0.5);
+}
+
 body {
   margin: 0 auto;
   min-height: 100vh;

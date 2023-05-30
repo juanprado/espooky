@@ -4,9 +4,9 @@ import Placeholder from './components/Placeholder';
 
 export const metadata: Metadata = {
   title: 'Fernando and Bianca are getting married!',
-  description: 'Fernando and Bianca are getting married, details are coming soon!',
+  description: 'Looks like you are a bit lost!',
 };
 
-const Home = () => <Placeholder title="Coming Soon!" />
+const NotFound = () => <Placeholder title="Not Found!" />
 
-export default Home;
+export default NotFound;
