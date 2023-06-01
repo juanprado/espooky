@@ -1,9 +1,12 @@
 :root {
   --bone: #F4ECE0;
   --dark-overlay: rgba(6, 4, 7, 0.5);
+  --background: #1D1A1D;
+  --blood: #B73B24;
 }
 
 body {
+  background-color: var(--background);
   margin: 0 auto;
   min-height: 100vh;
   min-height: -webkit-fill-available;

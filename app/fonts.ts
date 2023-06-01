@@ -1,7 +1,7 @@
 import localFont from 'next/font/local';
 
 export const lordish = localFont({
-  src: './fonts/Lordish-Regular.woff',
+  src: './fonts/Lordish.woff',
   weight: 'normal',
 });
 

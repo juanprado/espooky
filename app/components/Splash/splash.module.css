@@ -1,0 +1,72 @@
+@keyframes splash-title {
+  0% {
+    opacity: 0.2;
+    font-size: 2vw;
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    font-size: 15vw;
+    opacity: 1;
+  }
+}
+
+@keyframes splash-background {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(90deg) scale(5.5);
+  }
+}
+
+.root {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  max-height: -webkit-fill-available;
+  overflow: hidden;
+  transform: translateZ(0);
+}
+
+.background {
+  background-image: url('/german-expressionist-room.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform-origin: center;
+  width: 100%;
+}
+
+.title {
+  color: var(--blood);
+  font-size: 2vw;
+  line-height: 1;
+  margin: 0;
+  z-index: 1;
+  opacity: 0.2;
+}
+
+.splashTitle {
+  animation-name: splash-title;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
+
+.splashBackground {
+  animation-name: splash-background;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}

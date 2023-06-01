@@ -1,5 +1,3 @@
-import { ReactNode } from 'react'
-import { LinkProps } from 'next/link';
 import clsx from 'clsx';
 
 import { lordish } from 'app/fonts';
@@ -8,7 +6,6 @@ import styles from './placeholder.module.css';
 
 type PlaceholderProps = {
   title: string
-  linkProps?: LinkProps
 }
 
 const Placeholder = (props: PlaceholderProps) => {
