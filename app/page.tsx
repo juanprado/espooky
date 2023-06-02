@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
-import Splash from 'app/components/Splash'
+// import Splash from 'app/components/Splash'
+// import Details from 'app/components/Details';
 import Placeholder from 'app/components/Placeholder';
-import Details from 'app/components/Details';
 
 export const metadata: Metadata = {
   title: 'Fernando and Bianca are getting married!',
@@ -11,8 +11,8 @@ export const metadata: Metadata = {
 
 const Home = () => (
   <>
-    <Splash />
-    <Details />
+    {/* <Splash />
+    <Details /> */}
     <Placeholder title="Coming Soon!" />
   </>
 );
