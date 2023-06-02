@@ -1,13 +1,15 @@
+@import 'app/styles/mixins';
+
 @keyframes splash-title {
   0% {
     opacity: 0.2;
-    font-size: 2vw;
+    font-size: 2.5vw;
   }
   25% {
     opacity: 1;
   }
   100% {
-    font-size: 15vw;
+    font-size: 20vw;
     opacity: 1;
   }
 }
@@ -25,12 +27,17 @@
   }
 }
 
+@mixin splashy {
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
+
 .root {
+  @include fill-screen-height;
   align-items: center;
   display: flex;
-  height: 100vh;
   justify-content: center;
-  max-height: -webkit-fill-available;
   overflow: hidden;
   transform: translateZ(0);
 }
@@ -50,7 +57,7 @@
 
 .title {
   color: var(--blood);
-  font-size: 2vw;
+  font-size: 2.5vw;
   line-height: 1;
   margin: 0;
   z-index: 1;
@@ -58,15 +65,11 @@
 }
 
 .splashTitle {
+  @include splashy;
   animation-name: splash-title;
-  animation-duration: 1.5s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in;
 }
 
 .splashBackground {
+  @include splashy;
   animation-name: splash-background;
-  animation-duration: 1.5s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in;
 }

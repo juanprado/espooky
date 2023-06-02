@@ -1,6 +1,7 @@
+@import 'app/styles/mixins';
+
 .root {
-  height: 100vh;
-  max-height: -webkit-fill-available;
+  @include fill-screen-height;
   position: relative;
 }
 

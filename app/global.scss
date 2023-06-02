@@ -1,0 +1,39 @@
+:root {
+  --bone: #F4ECE0;
+  --dark-overlay: rgba(6, 4, 7, 0.5);
+  --dark: #1D1A1D;
+  --blood: #B73B24;
+}
+
+body {
+  background-color: var(--dark);
+  margin: 0 auto;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+html {
+  height: -webkit-fill-available;
+  font-size: 16px;
+
+  @media screen and (min-width: 900px) {
+    font-size: 18px;
+  }
+    
+  @media screen and (min-width: 1200px) {
+    font-size: 20px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}

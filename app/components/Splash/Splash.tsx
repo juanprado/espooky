@@ -3,7 +3,7 @@ import clsx from 'clsx';
 
 import { lordish } from 'app/fonts';
 
-import styles from './splash.module.css';
+import styles from './splash.module.scss';
 
 const Splash = () => {
   const [isAnimating, setAnimation] = useState(false);
