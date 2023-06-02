@@ -6,8 +6,11 @@
 @mixin button {
   border: 1px solid var(--dark);
   color: var(--dark);
+  font-weight: 500;
+  font-size: 1em;
   min-width: 200px;
   padding: 16px 24px;
+  transition: border-color 300ms ease-in-out, color 300ms ease-in-out; 
 
   &:hover, &:focus {
     border-color: var(--blood);
