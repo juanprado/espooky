@@ -1,0 +1,16 @@
+@mixin fill-screen-height {
+  height: 100vh;
+  max-height: -webkit-fill-available;
+}
+
+@mixin button {
+  border: 1px solid var(--dark);
+  color: var(--dark);
+  min-width: 200px;
+  padding: 16px 24px;
+
+  &:hover, &:focus {
+    border-color: var(--blood);
+    color: var(--blood);
+  }
+}
