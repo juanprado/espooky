@@ -15,7 +15,7 @@ const Home = () => (
     <Splash />
     <Details />
     <AttireGallery />
-    <Placeholder title="Coming Soon!" />
+    <Placeholder title="See You There!" />
   </>
 );
 

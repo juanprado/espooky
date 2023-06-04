@@ -9,6 +9,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+      <link
+        rel="icon"
+        href="/icon.png"
+        type="image/png"
+        sizes="any"
+      />
+      </head>
       <body className={futura.className}>{children}</body>
     </html>
   )
