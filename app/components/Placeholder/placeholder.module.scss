@@ -16,7 +16,7 @@
 
 .content {
   align-items: center;
-  background: var(--dark-overlay);
+  background: var(--dark-overlay-color);
   display: flex;
   height: 100%;
   justify-content: center;
@@ -24,7 +24,7 @@
 }
 
 .title {
-  color: var(--bone);
+  color: var(--bone-color);
   font-size: 15vw;
   margin: 0;
 }

@@ -1,35 +1,29 @@
-.root {
-  background: var(--bone);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 48px 24px;
-  max-width: 100%;
+@import 'app/styles/mixins';
 
-  @media screen and (min-width: 900px) {
-    padding: 144px 24px;
-  }
+.root {
+  @include section-padding;
+  align-items: center;
+  background: var(--bone-color);
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  min-height: 100vh;
 }
 
 .container {
   margin: 0 auto;
-  max-width: 700px;
   width: 100%;
 
-  @media screen and (min-width: 900px) {
-    max-width: 1032px;
+  @include min-width(large) {
+    max-width: $breakpoint-large;
   }
 }
 
 .title {
-  color: var(--blood);
-  font-size: 5.5em;
-  line-height: 1;
-  margin: 0 0 24px;
-
-  @media screen and (min-width: 900px) {
-    font-size: 7em;
-  }
+  color: var(--blood-color);
+  font-size: toRem(128);
+  line-height: 1.3;
+  margin-bottom: toRem(24);
 }
 
 .body {
@@ -37,7 +31,7 @@
   flex-direction: column;
   gap: 24px;
 
-  @media screen and (min-width: 900px) {
+  @include min-width(medium) {
     flex-direction: row;
     gap: 40px;
   }
@@ -52,17 +46,17 @@
 }
 
 .subtitle {
-  color: var(--blood);
-  font-size: 0.8em;
+  color: var(--blood-color);
+  font-size: toRem(16);
   font-weight: 500;
-  margin-bottom: 16px;
   letter-spacing: 0.1em;
+  margin-bottom: toRem(16);
   text-transform: uppercase;
 }
 
 .text {
-  font-size: 1.2em;
+  font-size: toRem(24);
   letter-spacing: 0.1em;
+  margin-bottom: toRem(54);
   text-transform: uppercase;
-  margin-bottom: 48px;
 }

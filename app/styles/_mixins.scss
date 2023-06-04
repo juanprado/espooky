@@ -1,11 +1,44 @@
+@import 'app/styles/variables';
+
+@function toRem($value) {
+  $remValue: ($value / 20) + rem; 
+  @return $remValue;
+}
+
+@mixin min-width($breakpoint) {
+  @if ($breakpoint == xsmall) {
+    @media (min-width: $breakpoint-xsmall) {
+      @content;
+    }
+  } @else if ($breakpoint == small) {
+    @media (min-width: $breakpoint-small) {
+      @content;
+    }
+  } @else if ($breakpoint == medium) {
+    @media (min-width: $breakpoint-medium) {
+      @content;
+    }
+  } @else if ($breakpoint == large) {
+    @media (min-width: $breakpoint-large) {
+      @content;
+    }
+  } @else if ($breakpoint == xlarge) {
+    @media (min-width: $breakpoint-extra-large) {
+      @content;
+    }
+  } @else {
+    @error "UNKNOWN MEDIA BREAKPOINT #{$breakpoint}";
+  }
+}
+
 @mixin fill-screen-height {
   height: 100vh;
   max-height: -webkit-fill-available;
 }
 
 @mixin button {
-  border: 1px solid var(--dark);
-  color: var(--dark);
+  border: 1px solid var(--dark-color);
+  color: var(--dark-color);
   font-weight: 500;
   font-size: 1em;
   min-width: 200px;
@@ -13,7 +46,19 @@
   transition: border-color 300ms ease-in-out, color 300ms ease-in-out; 
 
   &:hover, &:focus {
-    border-color: var(--blood);
-    color: var(--blood);
+    border-color: var(--blood-color);
+    color: var(--blood-color);
+  }
+}
+
+@mixin section-padding {
+  padding: var(--small-vertical-padding) var(--small-horizontal-padding);
+
+  @include min-width(medium) {
+    padding: var(--med-vertical-padding) var(--med-horizontal-padding);
+  }
+
+  @include min-width(large) {
+    padding: var(--large-vertical-padding) var(--large-horizontal-padding);
   }
 }
