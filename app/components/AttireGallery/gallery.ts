@@ -7,12 +7,12 @@ export type Gallery = GalleryImage[];
 
 export default [
   {
-    src: 'tulle',
-    alt: 'Michelle Yeoh in a lovely tulle dress',
+    src: 'black-tulle',
+    alt: 'Michelle Yeoh in a black tulle dress',
   },
   {
-    src: 'satin',
-    alt: 'Meryl Streep in a satin suit',
+    src: 'blue-satin',
+    alt: 'Meryl Streep in a blue satin suit',
   },
   {
     src: 'stripe-wool',

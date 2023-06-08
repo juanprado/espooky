@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import clsx from 'clsx';
 
 import { lordish } from 'app/fonts';
@@ -35,25 +36,13 @@ const AttireGallery = () => {
               <img
                 className={styles.image}
                 key={image.src}
-                src={`/${image.src}.jpg`}
+                src={`/attire-gallery/${image.src}.jpg`}
                 alt={image.alt}
+                width={1500}
+                height={1798}
               />
             </li>
           ))}
-          {/* {columns.map((column) => (
-            <ul className={styles.list}>
-              {column.map((image) => (
-                <li className={styles.item}>
-                  <img
-                    className={styles.image}
-                    key={image.src}
-                    src={`/${image.src}.jpg`}
-                    alt={image.alt}
-                  />
-                </li>
-              ))}
-            </ul>
-          ))} */}
         </ul>
       </section>
     );
