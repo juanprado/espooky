@@ -9,7 +9,7 @@
     opacity: 1;
   }
   100% {
-    font-size: 18.5vw;
+    font-size: var(--splash-title-size);
     opacity: 1;
   }
 }

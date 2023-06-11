@@ -10,10 +10,8 @@
 }
 
 .title {
+  @include section-title;
   color: var(--bone-color);
-  font-size: toRem(128);
-  line-height: 1.3;
-  margin-bottom: toRem(24);
 }
 
 .subtitle {
@@ -47,27 +45,19 @@
 
   @include min-width(medium) {
     column-count: 2;
-    column-gap: var(--med-horizontal-padding);
   }
 
   @include min-width(large) {
     column-count: 3;
-    column-gap: var(--large-horizontal-padding);
   }
 }
 
 .item {
-  margin-bottom: var(--small-horizontal-padding);
-
-  @include min-width(medium) {
-    margin-bottom: var(--med-horizontal-padding);
-  }
+  margin-bottom: var(--horizontal-padding);
 
   @include min-width(large) {
-    margin-bottom: var(--large-horizontal-padding);
-
     &:nth-child(4) {
-      padding-top: var(--large-horizontal-padding);
+      padding-top: var(--horizontal-padding);
     }
   }
 }

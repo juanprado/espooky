@@ -6,12 +6,25 @@
   --dark-color: #1D1A1D;
   --blood-color: #B73B24;
   --base-size: 4px;
-  --large-horizontal-padding: calc(var(--base-size) * 16);
-  --med-horizontal-padding: calc(var(--base-size) * 8);
-  --small-horizontal-padding: calc(var(--base-size) * 6);
-  --large-vertical-padding: calc(var(--base-size) * 32);
-  --med-vertical-padding: calc(var(--base-size) * 16);
-  --small-vertical-padding: calc(var(--base-size) * 12);
+  --horizontal-padding: calc(var(--base-size) * 6);
+  --vertical-padding: calc(var(--base-size) * 12);
+  --splash-title-size: 24vw;
+}
+
+@include min-width(medium) {
+  :root {
+    --splash-title-size: 18.5vw;
+    --horizontal-padding: calc(var(--base-size) * 8);
+    --vertical-padding: calc(var(--base-size) * 16);
+  }
+}
+
+@include min-width(large) {
+  :root {
+    --splash-title-size: 18.5vw;
+    --horizontal-padding: calc(var(--base-size) * 16);
+    --vertical-padding: calc(var(--base-size) * 32);
+  }
 }
 
 *, *::before, *::after {

@@ -25,6 +25,11 @@
 
 .title {
   color: var(--bone-color);
-  font-size: 15vw;
+  font-size: toRem(100);
   margin: 0;
+  text-align: center;
+
+  @include min-width(medium) {
+    font-size: 15vw;
+  }
 }

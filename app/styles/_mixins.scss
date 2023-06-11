@@ -52,13 +52,15 @@
 }
 
 @mixin section-padding {
-  padding: var(--small-vertical-padding) var(--small-horizontal-padding);
+  padding: var(--vertical-padding) var(--horizontal-padding);
+}
+
+@mixin section-title {
+  font-size: toRem(100);
+  line-height: 1.3;
+  margin-bottom: toRem(24);
 
   @include min-width(medium) {
-    padding: var(--med-vertical-padding) var(--med-horizontal-padding);
-  }
-
-  @include min-width(large) {
-    padding: var(--large-vertical-padding) var(--large-horizontal-padding);
+    font-size: toRem(128);
   }
 }

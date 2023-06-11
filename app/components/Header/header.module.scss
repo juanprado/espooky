@@ -24,16 +24,7 @@
 }
 
 .nav {
-  // background: var(--dark-color);
-  padding: toRem(40) var(--small-horizontal-padding) 0;
-
-  @include min-width(medium) {
-    padding: toRem(40) var(--med-horizontal-padding) 0;
-  }
-
-  @include min-width(large) {
-    padding: toRem(40) var(--large-horizontal-padding) 0;
-  }
+  padding: toRem(40) var(--horizontal-padding) 0;
 }
 
 .list {
@@ -49,7 +40,7 @@
   font-size: toRem(12);
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  transition: color .1s ease-in-out;
+  transition: color .25s ease-in-out;
 
   @include min-width(medium) {
     font-size: toRem(16);
@@ -59,13 +50,13 @@
 .link {
   color: var(--bone-color);
   text-decoration: none;
-  transition: color .1s ease-in-out;
+  transition: color .25s ease-in-out;
 
   &:after {
     background: transparent;
     content: '';
     display: block;
-    height: 1px;
+    height: 2px;
     margin: auto;
     transition: width 0.5s ease;
     width: 0px;
