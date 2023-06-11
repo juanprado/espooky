@@ -6,13 +6,18 @@ import styles from './placeholder.module.scss';
 
 type PlaceholderProps = {
   title: string
+  id: string
 }
 
 const Placeholder = (props: PlaceholderProps) => {
-  const { title } = props;
+  const { title, id } = props;
 
   return (
-    <section className={styles.root}>
+    <section
+      className={styles.root}
+      id={id}
+      data-section={id}
+    >
       <video
         autoPlay
         className={styles.video}

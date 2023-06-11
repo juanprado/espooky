@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 
+import Header from 'app/components/Header';
 import Splash from 'app/components/Splash'
 import Details from 'app/components/Details';
 import AttireGallery from 'app/components/AttireGallery';
@@ -12,10 +13,12 @@ export const metadata: Metadata = {
 
 const Home = () => (
   <>
-    <Splash />
-    <Details />
-    <AttireGallery />
-    <Placeholder title="See You There!" />
+    <Header />
+    {/* The ids must match the ids in sections.ts */}
+    <Splash id="splash" />
+    <Details id="details" />
+    <AttireGallery id="attire-gallery" />
+    <Placeholder id="footer" title="See You There!" />
   </>
 );
 

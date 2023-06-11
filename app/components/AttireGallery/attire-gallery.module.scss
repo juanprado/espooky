@@ -31,8 +31,8 @@
   font-weight: 500;
   letter-spacing: 0.1em;
   line-height: 1.25;
-  max-width: 684px;
   margin-bottom: toRem(64);
+  max-width: 684px;
 }
 
 .gallery {
@@ -41,9 +41,9 @@
 }
 
 .list {
+  list-style-type: none;
   margin: 0;
   padding: 0;
-  list-style-type: none;
 
   @include min-width(medium) {
     column-count: 2;
@@ -73,7 +73,7 @@
 }
 
 .image {
-  max-width: 400px;
   height: auto;
+  max-width: 400px;
   width: 100%;
 }

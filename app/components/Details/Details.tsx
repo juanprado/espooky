@@ -5,8 +5,16 @@ import LinkButton from 'app/components/LinkButton';
 
 import styles from './details.module.scss';
 
-const Details = () => (
-  <section className={styles.root}>
+type DetailsProps = {
+  id: string,
+}
+
+const Details = (props: DetailsProps) => (
+  <section
+    className={styles.root}
+    id={props.id}
+    data-section={props.id}
+  >
     <div className={styles.container}>
       <h1 className={clsx(lordish.className, styles.title)}>
         Details
