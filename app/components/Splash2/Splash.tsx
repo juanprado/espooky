@@ -15,15 +15,15 @@ const Splash = (props: SplashProps) => (
     id={props.id}
     data-section={props.id}
   >
-    <div className={styles.square21}>
+    {/* <div className={styles.square21}>
       <div className={styles.square20}>
         <div className={styles.square19}>
           <div className={styles.square18}>
             <div className={styles.square17}>
               <div className={styles.square16}>
-                <div className={styles.square15}>
-                  <div className={styles.square15}>
-                    <div className={styles.square14}>
+                <div className={styles.square15}> */}
+                  {/* <div className={styles.square15}>
+                    <div className={styles.square14}> */}
                       <div className={styles.square13}>
                         <div className={styles.square12}>
                           <div className={styles.square11}>
@@ -50,15 +50,15 @@ const Splash = (props: SplashProps) => (
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                </div>
+                    {/* </div>
+                  </div> */}
+                {/* </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </div> */}
     <h1 className={clsx(lordish.className, styles.title)}>
       Bianca <br />+ Fernando
     </h1>

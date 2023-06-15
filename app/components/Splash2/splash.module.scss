@@ -8,7 +8,7 @@
 
 @keyframes splash-title {
   0% {
-    opacity: 0.2;
+    opacity: 0;
     font-size: 2.5vw;
   }
   25% {
@@ -55,10 +55,10 @@ $squares: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
 }
 
 .title {
-  animation-delay: 1.8s;
-  animation-duration: 0.7s;
+  animation-delay: 1.7s;
+  animation-duration: 0.8s;
   animation-fill-mode: forwards;
-  animation-timing-function: ease-in;
+  // animation-timing-function: ease-in;
   animation-name: splash-title;
   color: var(--blood-color);
   font-size: 2.5vw;
