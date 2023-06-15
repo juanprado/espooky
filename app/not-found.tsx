@@ -7,6 +7,6 @@ export const metadata: Metadata = {
   description: 'Looks like you are a bit lost!',
 };
 
-const NotFound = () => <Placeholder title="Not Found!" />
+const NotFound = () => <Placeholder id="not-found" title="Not Found!" />
 
 export default NotFound;
