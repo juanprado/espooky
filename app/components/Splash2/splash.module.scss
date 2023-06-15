@@ -1,0 +1,70 @@
+@import 'app/styles/mixins';
+
+@keyframes rotate {
+  100% {
+    transform: rotate(13deg) scale(1);
+  }
+}
+
+@keyframes splash-title {
+  0% {
+    opacity: 0.2;
+    font-size: 2.5vw;
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    font-size: var(--splash-title-size);
+    opacity: 1;
+  }
+}
+
+
+$squares: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24;
+
+.root {
+  @include fill-screen-height;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  transform: translateZ(0);
+}
+
+@each $square in $squares {
+  .square#{$square} {
+    align-items: center;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+    animation-name: rotate;
+    animation-timing-function: ease-out;
+    display: flex;
+    height: calc(200vw + $square * 20px);
+    justify-content: center;
+    position: relative;
+    transform: rotateZ(2deg) scale(0);
+    width: calc(200vw + $square * 20px);
+
+    @if($square % 2 == 0) {
+      background: var(--bone-color);
+    } @else {
+      background: var(--dark-color);
+    }
+  }
+}
+
+.title {
+  animation-delay: 1.8s;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-name: splash-title;
+  color: var(--blood-color);
+  font-size: 2.5vw;
+  line-height: 1;
+  margin: 0;
+  opacity: 0;
+  position: absolute;
+  z-index: 1;
+}
