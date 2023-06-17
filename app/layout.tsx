@@ -16,6 +16,7 @@ export default function RootLayout({
         type="image/png"
         sizes="any"
       />
+      <script dangerouslySetInnerHTML={{ __html: `history.scrollRestoration = "manual"` }} />
       </head>
       <body className={futura.className}>{children}</body>
     </html>

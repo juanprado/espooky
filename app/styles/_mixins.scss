@@ -36,14 +36,31 @@
   max-height: -webkit-fill-available;
 }
 
-@mixin button {
-  border: 1px solid var(--dark-color);
-  color: var(--dark-color);
+@mixin button-base {
   font-weight: 500;
   font-size: 1em;
   min-width: 200px;
   padding: 16px 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
   transition: border-color 300ms ease-in-out, color 300ms ease-in-out; 
+}
+
+@mixin button {
+  @include button-base;
+  border: 1px solid var(--dark-color);
+  color: var(--dark-color);
+
+  &:hover, &:focus {
+    border-color: var(--blood-color);
+    color: var(--blood-color);
+  }
+}
+
+@mixin button-light {
+  @include button-base;
+  border: 1px solid var(--bone-color);
+  color: var(--bone-color);
 
   &:hover, &:focus {
     border-color: var(--blood-color);

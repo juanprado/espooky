@@ -1,11 +1,12 @@
 import { Metadata } from 'next';
 
+import AttireGallery from 'app/components/AttireGallery';
+import Details from 'app/components/Details';
+import Gifts from 'app/components/Gifts';
 import Header from 'app/components/Header';
+import Placeholder from 'app/components/Placeholder';
 import Splash from 'app/components/Splash'
 import Splash2 from 'app/components/Splash2';
-import Details from 'app/components/Details';
-import AttireGallery from 'app/components/AttireGallery';
-import Placeholder from 'app/components/Placeholder';
 
 export const metadata: Metadata = {
   title: 'Fernando and Bianca are getting married!',
@@ -20,6 +21,7 @@ const Home = () => (
     <Splash2 id="splash" />
     <Details id="details" />
     <AttireGallery id="attire-gallery" />
+    <Gifts id="gifts" />
     <Placeholder id="footer" title="See You There!" />
   </>
 );

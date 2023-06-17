@@ -6,3 +6,7 @@
   text-align: center;
   text-decoration: none;
 }
+
+.light {
+  @include button-light;
+}
