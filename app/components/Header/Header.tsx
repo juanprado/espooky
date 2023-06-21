@@ -112,7 +112,13 @@ const Header = () => {
             </SmoothScrollLink>
           </li>
           <li className={styles.item}>
-            Gifts
+            <SmoothScrollLink
+              className={styles.link}
+              href="#gifts"
+              scroll={false}
+            >
+              Gifts
+            </SmoothScrollLink>
           </li>
         </ul>
       </nav>
