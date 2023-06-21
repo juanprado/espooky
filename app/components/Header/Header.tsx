@@ -61,17 +61,22 @@ const Header = () => {
       getActiveSection();
       window.addEventListener('scroll', throttle(getActiveSection, 200));
       window.addEventListener('resize', throttle(setSectionData, 200));
+      window.addEventListener('scrollend', setSectionData);
     }
 
     () => {
       window.removeEventListener('scroll', throttle(getActiveSection, 200));
       window.removeEventListener('resize', throttle(setSectionData, 200));
+      window.removeEventListener('scrollend', setSectionData);
     }
   }, [setSectionData, getActiveSection]);
 
   return (
     <header
-      className={clsx(styles.header, { [styles.dark]: activeSection.theme === 'light' })}
+      className={clsx(
+        styles.header,
+        { [styles.dark]: activeSection.theme === 'light' }
+      )}
       ref={headerRef}
     >
       <nav className={styles.nav}>
@@ -98,7 +103,13 @@ const Header = () => {
             </SmoothScrollLink>
           </li>
           <li className={styles.item}>
-            Things To Do
+            <SmoothScrollLink
+              className={styles.link}
+              href="#things-to-do"
+              scroll={false}
+            >
+              Things To Do
+            </SmoothScrollLink>
           </li>
           <li className={styles.item}>
             Gifts

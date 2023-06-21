@@ -35,7 +35,7 @@ $squares: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13;
 @each $square in $squares {
   .square#{$square} {
     align-items: center;
-    animation-duration: 2.5s;
+    animation-duration: $splash-duration;
     animation-fill-mode: forwards;
     animation-name: rotate;
     animation-timing-function: ease-out;
@@ -55,8 +55,8 @@ $squares: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13;
 }
 
 .title {
-  animation-delay: 1.7s;
-  animation-duration: 0.8s;
+  animation-delay: $splash-duration * 0.75;
+  animation-duration: $splash-duration * 0.25;
   animation-fill-mode: forwards;
   // animation-timing-function: ease-in;
   animation-name: splash-title;

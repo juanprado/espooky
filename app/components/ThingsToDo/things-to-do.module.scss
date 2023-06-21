@@ -1,0 +1,60 @@
+@import 'app/styles/mixins';
+
+.root {
+  @include section-padding;
+  align-items: center;
+  background: var(--bone-color);
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  min-height: 100vh;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+
+  @include min-width(large) {
+    max-width: $breakpoint-large;
+  }
+}
+
+.title {
+  @include section-title;
+  color: var(--blood-color);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @include min-width(medium) {
+    flex-direction: row;
+    gap: 40px;
+  }
+}
+
+.video {
+  width: 100%;
+}
+
+.content {
+  flex: 1;
+}
+
+.subtitle {
+  color: var(--blood-color);
+  font-size: toRem(16);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  margin-bottom: toRem(16);
+  text-transform: uppercase;
+}
+
+.text {
+  font-size: toRem(24);
+  letter-spacing: 0.1em;
+  margin-bottom: toRem(54);
+  text-transform: uppercase;
+}
