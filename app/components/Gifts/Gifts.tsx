@@ -28,8 +28,8 @@ const Gifts = (props: GiftsProps) => (
             muted
             playsInline
           >
-            <source src="/candlestick-hands.webm" type="video/webm" />
-            <source src="/candlestick-hands.mp4" type="video/mp4" />
+            <source src="/the-addams-family-thing.webm" type="video/webm" />
+            <source src="/the-addams-family-thing.mp4" type="video/mp4" />
           </video>
         </div>
         <div className={styles.content}>

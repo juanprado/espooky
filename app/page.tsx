@@ -22,7 +22,7 @@ const Home = () => (
     <Splash2 id="splash" />
     <Details id="details" />
     <AttireGallery id="attire-gallery" />
-    <ThingsToDo id="things-to=do" />
+    <ThingsToDo id="things-to-do" />
     <Gifts id="gifts" />
     <Placeholder id="footer" title="See You There!" />
   </>

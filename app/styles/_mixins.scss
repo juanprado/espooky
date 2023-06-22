@@ -43,7 +43,7 @@
   padding: 16px 24px;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
-  transition: border-color 300ms ease-in-out, color 300ms ease-in-out; 
+  transition: background-color 300ms ease-in-out, color 300ms ease-in-out; 
 }
 
 @mixin button {
@@ -52,8 +52,8 @@
   color: var(--dark-color);
 
   &:hover, &:focus {
-    border-color: var(--blood-color);
-    color: var(--blood-color);
+    background-color: var(--dark-color);
+    color: var(--bone-color);
   }
 }
 
@@ -63,8 +63,8 @@
   color: var(--bone-color);
 
   &:hover, &:focus {
-    border-color: var(--blood-color);
-    color: var(--blood-color);
+    background-color: var(--bone-color);
+    color: var(--dark-color);
   }
 }
 

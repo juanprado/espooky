@@ -12,7 +12,7 @@ export default [
   },
   {
     src: 'blue-satin',
-    alt: 'Meryl Streep in a blue satin suit',
+    alt: 'Olivia Coleman in a blue satin dress',
   },
   {
     src: 'stripe-wool',
