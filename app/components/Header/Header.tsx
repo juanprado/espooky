@@ -20,6 +20,7 @@ const Header = () => {
   const headerRef = useRef<HTMLHeadingElement>(null);
   const sectionsData = useRef<Section[]>(initialSections);
   const [activeSection, setActiveSection] = useState<Section>(initialSections[0]);
+  const [showNav, toggleNav] = useState(false);
 
   const setSectionData = useCallback(() => {
     sectionsData.current = initialSections.map((section) => {
@@ -79,25 +80,39 @@ const Header = () => {
       )}
       ref={headerRef}
     >
-      <nav className={styles.nav}>
+      <div className={styles.menuContainer}>
+        <button
+          className={clsx(styles.menuButton, { [styles.withOpenNav]: showNav })}
+          onClick={() => toggleNav(!showNav)}
+        >
+          <span className={styles.menuText}>
+            {showNav ? 'Close' : 'Menu'}
+          </span>
+          <div className={styles.menuIcon}>
+            <span />
+            <span />
+            <span />
+          </div>
+        </button>
+      </div>
+      <nav className={clsx(styles.nav, { [styles.showNav]: showNav })}>
         <ul className={styles.list}>
           <li className={styles.item}>
             <SmoothScrollLink
               className={styles.link}
               href="#details"
               scroll={false}
+              onClick={() => toggleNav(false)}
             >
               Details
             </SmoothScrollLink>
-          </li>
-          <li className={styles.item}>
-            Rsvp
           </li>
           <li className={styles.item}>
             <SmoothScrollLink
               className={styles.link}
               href="#attire-gallery"
               scroll={false}
+              onClick={() => toggleNav(false)}
             >
               Attire Gallery
             </SmoothScrollLink>
@@ -107,6 +122,7 @@ const Header = () => {
               className={styles.link}
               href="#things-to-do"
               scroll={false}
+              onClick={() => toggleNav(false)}
             >
               Things To Do
             </SmoothScrollLink>
@@ -116,9 +132,18 @@ const Header = () => {
               className={styles.link}
               href="#gifts"
               scroll={false}
+              onClick={() => toggleNav(false)}
             >
               Gifts
             </SmoothScrollLink>
+          </li>
+          <li className={styles.item}>
+            <a
+              className={styles.rsvpLink}
+              href="https://biancaandfernando.rsvpify.com"
+            >
+              RSVP
+            </a>
           </li>
         </ul>
       </nav>

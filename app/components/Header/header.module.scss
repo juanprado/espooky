@@ -7,75 +7,220 @@
 }
 
 .header {
+  animation-delay: $splash-duration;
+  animation-duration: 300ms;
+  animation-fill-mode: forwards;
+  animation-name: show-header;
+  animation-timing-function: ease-in;
   color: var(--light-color);
   left: 0;
+  opacity: 0;
+  overflow: hidden;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1;
-  opacity: 0;
-  animation-delay: $splash-duration;
-  animation-duration: 300ms;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in;
-  animation-name: show-header;
 }
 
 .dark {
-  & .item {
-    color: var(--dark-color);
-  }
+  @include min-width(medium) {
+    & .item {
+      color: var(--dark-color);
+    }
+  
+    & .link {
+      color: var(--dark-color);
+  
+      &:hover:after {
+        background: var(--dark-color);
+      }
+    }
 
-  & .link {
-    color: var(--dark-color);
+    & .rsvpLink {
+      border-color: var(--dark-color);
+      background-color: var(--dark-color);
+      color: var(--bone-color);
 
-    &:hover:after {
-      background: var(--dark-color);
+      &:hover, &:focus {
+        background-color: var(--bone-color);
+        color: var(--dark-color);
+        border-color: var(--dark-color);
+      }
     }
   }
 }
 
+.menuContainer {
+  background: var(--dark-color);
+  padding: toRem(40) var(--horizontal-padding);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 2;
+
+  @include min-width(medium) {
+    display: none;
+  }
+}
+
+.menuButton {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: var(--bone-color);
+  cursor: pointer;
+  display: flex;
+  font-size: toRem(20);
+  letter-spacing: 0.1em;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.menuIcon {
+  height: 16px;
+  margin-left: 16px;
+  position: relative;
+  width: 24px;
+
+  & span {
+    background: white;
+    height: 2px;
+    position: absolute;
+    right: 0;
+    transform-origin: left center;
+    transition: .50s ease-in-out;
+    transform: rotate(0deg);
+    width: 100%;
+
+    &:first-child {
+      top: 0;
+    }
+
+    &:nth-child(2) {
+      top: 6px;
+    }
+
+    &:last-child {
+      top: 12px;
+    }
+  }
+}
+
+.withOpenNav .menuIcon span {
+  &:first-child {
+    transform: rotate(45deg);
+    top: -3px;
+  }
+
+  &:nth-child(2) {
+    width: 0;
+    opacity: 0;
+  }
+
+  &:last-child {
+    transform: rotate(-45deg);
+    top: 14px;
+  }
+}
+
 .nav {
-  padding: toRem(40) var(--horizontal-padding) 0;
+  background: var(--dark-color);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: scroll;
+  padding: toRem(20) var(--horizontal-padding);
+  transition: transform 0.5s ease-in-out;
+  transform: translateY(-100%);
+
+  @include min-width(medium) {
+    transition: none;
+    background: none;
+    height: auto;
+    padding-bottom: 0;
+    transform: translateY(0);
+  }
+}
+
+.showNav {
+  transform: translateY(0);
 }
 
 .list {
-  display: flex;
-  justify-content: space-between;
   list-style-type: none;
-  margin: 0;
+  margin: auto 0 0;
   padding: 0;
+
+  @include min-width(medium) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .item {
   color: var(--bone-color);
-  font-size: toRem(12);
+  font-size: toRem(30);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   transition: color .25s ease-in-out;
+  padding: toRem(40) 0;
+  border-bottom: 1px solid var(--bone-color);
+
+  &:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
 
   @include min-width(medium) {
     font-size: toRem(16);
+    padding: 0;
+    border-bottom: none;
   }
 }
 
 .link {
   color: var(--bone-color);
+  display: block;
   text-decoration: none;
   transition: color .25s ease-in-out;
 
-  &:after {
-    background: transparent;
-    content: '';
-    display: block;
-    height: 2px;
-    margin: auto;
-    transition: width 0.5s ease;
-    width: 0px;
+  @include min-width(medium) {
+    &:after {
+      background: transparent;
+      content: '';
+      display: block;
+      height: 2px;
+      margin: auto;
+      transition: width 0.5s ease;
+      width: 0px;
+    }
+  
+    &:hover:after {
+      background: var(--bone-color);
+      width: 100%;
+    }
+  }
+}
+
+.rsvpLink {
+  @include button-base;
+  background-color: var(--bone-color);
+  border: 1px solid var(--dark-color);
+  color: var(--dark-color);
+  display: block;
+  text-align: center;
+  text-decoration: none;
+
+  &:hover, &:focus {
+    background-color: var(--dark-color);
+    color: var(--bone-color);
+    border-color: var(--bone-color);
   }
 
-  &:hover:after {
-    background: var(--bone-color);
-    width: 100%;
+  @include min-width(medium) {
+    min-width: 0;
   }
 }
