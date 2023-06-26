@@ -42,4 +42,12 @@ export default [
     src: 'shimmery-fabrics',
     alt: 'Jonathan Van Ness in an shimmery fabric dress',
   },
+  {
+    src: 'black-lace-2',
+    alt: 'Jenna Ortega in a black lace dress',
+  },
+  {
+    src: 'leather-2',
+    alt: 'Rihanna in a leather blazer',
+  },
 ]

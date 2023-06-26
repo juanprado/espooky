@@ -23,7 +23,9 @@ const AttireGallery = (props: AttireGallery) => (
       Espooky Eleganza
     </h2>
     <p className={styles.text}>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut ante id lacus laoreet semper non vel urna. Nam justo felis, dapibus eu orci iaculis, fringilla tempor odio.
+      Our theme is inspired by our love of spooky things. We want you to feel your most glamorous self, celebrating the spirit of all things magical.
+      <br /><br />
+      Need inspiration? We hope these photos will inspire you to embrace the bewitching and mysterious side of spooky.
     </p>
     <ul className={styles.list}>
       {gallery.map(image => (
