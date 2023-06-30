@@ -8,6 +8,8 @@ type LinkButtonProps = {
   className?: string
   children: ReactNode
   theme: 'dark' | 'light'
+  target?: string
+  rel?: string
 }
 
 const LinkButton = (props: LinkProps & LinkButtonProps) => {

@@ -37,7 +37,14 @@ const Gifts = (props: GiftsProps) => (
           <p className={styles.text}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
           </p>
-          <LinkButton theme="dark" href="/">Contribute</LinkButton>
+          <LinkButton
+            theme="dark"
+            href="http://www.zola.com/registry/bianca-fernando"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Contribute
+            </LinkButton>
         </div>
       </div>
     </div>
