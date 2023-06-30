@@ -28,14 +28,21 @@ const ThingsToDo = (props: ThingsToDoProps) => (
       <ul className={styles.list}>
         {favorites.map(favorite => (
           <li className={styles.listItem}>
-            <Image
-              className={styles.image}
-              key={favorite.image}
-              src={`/things-gallery/${favorite.image}.jpg`}
-              alt={favorite.title}
-              width={300}
-              height={358.378}
-            />
+            <a
+              className={styles.link}
+              href={favorite.link}
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <Image
+                className={styles.image}
+                key={favorite.image}
+                src={`/things-gallery/${favorite.image}.jpg`}
+                alt={favorite.title}
+                width={300}
+                height={358.378}
+              />
+            </a>
             <h3 className={styles.location}>{favorite.location}</h3>
             <h2 className={styles.favorite}>{favorite.title}</h2>
             <p className={styles.description}>{favorite.description}</p>

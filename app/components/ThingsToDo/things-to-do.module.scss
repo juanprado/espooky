@@ -48,11 +48,22 @@
   }
 }
 
+.link {
+  background: var(--dark-color);
+  display: flex;
+  margin-bottom: toRem(24);
+}
+
 .image {
   aspect-ratio: 5000 / 5973;
   background: gray;
   width: 100%;
-  margin-bottom: toRem(24);
+  transition: opacity 0.25s ease-in-out;
+  opacity: 1;
+
+  &:hover {
+    opacity: 0.6;
+  }
 }
 
 .location {
