@@ -141,6 +141,7 @@ const Header = () => {
             <a
               className={styles.rsvpLink}
               href="https://biancaandfernando.rsvpify.com"
+              rel="noreferrer noopener"
             >
               RSVP
             </a>

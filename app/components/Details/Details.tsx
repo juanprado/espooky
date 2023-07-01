@@ -44,7 +44,23 @@ const Details = (props: DetailsProps) => (
             113 N 3rd St<br/>
             Brooklyn, NY 11249
           </p>
-          <LinkButton href="/">RSVP</LinkButton>
+          <div className={styles.buttonPanel}>
+            <LinkButton
+              className={clsx(styles.rsvpLink, styles.button)}
+              href="https://biancaandfernando.rsvpify.com"
+              rel="noreferrer noopener"
+            >
+              RSVP
+            </LinkButton>
+            <LinkButton
+              className={styles.button}
+              href="https://goo.gl/maps/5dBk33rXYhEn1StW6"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              Map
+            </LinkButton>
+          </div>
         </div>
       </div>
     </div>
