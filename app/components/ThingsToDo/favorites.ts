@@ -16,7 +16,7 @@ export default [
   {
     location: 'Dumbo, Brooklyn',
     title: "Juliana's Pizza",
-    description: 'Best Pie in NYC according to Fernando. Located near beautiful Brooklyn Bridge Park.',
+    description: "If you ask Fernando, this might be the best pizza in NYC. It's also located near the beautiful Brooklyn Bridge Park.",
     image: 'julianas',
     link: 'https://julianaspizza.com/',
   },
@@ -51,14 +51,14 @@ export default [
   {
     location: 'Park Slope, Brooklyn',
     title: 'Bogota Latin Bistro',
-    description: 'Best Colombian food in Brooklyn',
+    description: 'Great place for Colombian food in Brooklyn. Come hungry, the portions are massive',
     image: 'bogota-latin-bistro',
     link: 'https://www.bogotabistro.com/',
   },
   {
     location: 'Park Slope, Brooklyn',
     title: 'Nitehawk Cinema',
-    description: 'Dinner and a movie!',
+    description: "Bianca and Fernando have seen a bunch of stuff here. Their great menu changes based on what they are showing.",
     image: 'nitehawk-cinema',
     link: 'https://nitehawkcinema.com/prospectpark/',
   },
