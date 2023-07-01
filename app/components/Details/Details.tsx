@@ -36,7 +36,7 @@ const Details = (props: DetailsProps) => (
           <h2 className={styles.subtitle}>When</h2>
           <p className={styles.text}>
             Friday, October 13th, 2023<br/>
-            5:30pm - 10:30pm
+            6:00pm - 11:00pm
           </p>
           <h2 className={styles.subtitle}>Where</h2>
           <p className={styles.text}>

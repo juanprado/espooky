@@ -2,7 +2,7 @@ export default [
   {
     location: 'Astoria, Queens',
     title: 'Arepas Cafe',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'Bianca loves these arepas so much, she waited outside with friends for 45 minutes during a polar vortex just to secure a table.',
     image: 'arepas-cafe',
     link: 'https://www.theinfatuation.com/new-york/reviews/arepas-cafe',
   },
@@ -23,7 +23,7 @@ export default [
   {
     location: 'Greenpoint, Brooklyn',
     title: 'El Born',
-    description: 'Great tapas',
+    description: 'We love the tapas and cocktails here. It’s also where we shared our first kiss.',
     image: 'el-born',
     link: 'https://www.elbornnyc.com/',
   },
@@ -37,14 +37,14 @@ export default [
   {
     location: 'Upper West Side, Manhattan',
     title: "American Museum of Natural History",
-    description: "Bianca's favorite museum - dinosaurs!",
+    description: "This museum is Bianca’s favorite place in the city, where she goes to reconnect with her inner child.",
     image: 'american-museum-of-natural-history',
     link: 'https://www.amnh.org/',
   },
   {
     location: 'Hudson Yards, Manhattan',
     title: 'Mercado Little Spain',
-    description: 'Torta de queso y Pedro Ximenez!',
+    description: 'An amazing Spanish food market. For a spiritual experience, try their tarta de queso with a Pedro Ximenez sherry.',
     image: 'mercado-little-spain',
     link: 'https://www.littlespain.com/',
   },
@@ -61,12 +61,5 @@ export default [
     description: 'Dinner and a movie!',
     image: 'nitehawk-cinema',
     link: 'https://nitehawkcinema.com/prospectpark/',
-  },
-  {
-    location: 'East Village, Manhattan',
-    title: 'Cha Cha Matcha',
-    description: 'Matcha!',
-    image: 'cha-cha-matcha',
-    link: 'https://chachamatcha.com/',
   },
 ];

@@ -20,7 +20,7 @@ const AttireGallery = (props: AttireGallery) => (
       Attire Theme
     </h1>
     <h2 className={styles.subtitle}>
-      Espooky Eleganza
+      Espooky Elegancia
     </h2>
     <p className={styles.text}>
       Our theme is inspired by our love of spooky things. We want you to feel your most glamorous self, celebrating the spirit of all things magical.

@@ -35,7 +35,7 @@ const Gifts = (props: GiftsProps) => (
         <div className={styles.content}>
           <h2 className={styles.subtitle}>Honeymoon Fund</h2>
           <p className={styles.text}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+            If you're thinking of giving us a gift, we'd be thrilled if you'd consider contributing, in any amount you're comfortable with, towards our honeymoon in Japan. Please don't feel any pressure to contribute, since your presence at the wedding is the best gift we could ask for.
           </p>
           <LinkButton
             theme="dark"
