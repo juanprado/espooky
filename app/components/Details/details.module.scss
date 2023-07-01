@@ -62,11 +62,12 @@
 .buttonPanel {
   display: flex;
   gap: toRem(16);
+  min-width: 0;
 }
 
 .button {
   max-width: 200px;
-  min-width: auto;
+  min-width: 0;
   width: 100%;
 
   @include min-width(medium) {
