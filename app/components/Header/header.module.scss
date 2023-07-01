@@ -15,7 +15,6 @@
   color: var(--light-color);
   left: 0;
   opacity: 0;
-  overflow: hidden;
   position: fixed;
   top: 0;
   width: 100%;
@@ -53,8 +52,7 @@
 .menuContainer {
   background: var(--dark-color);
   padding: toRem(40) var(--horizontal-padding);
-  position: absolute;
-  top: 0;
+  position: relative;
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -132,6 +130,8 @@
   height: 100vh;
   overflow: scroll;
   padding: toRem(20) var(--horizontal-padding);
+  position: absolute;
+  width: 100%;
   transition: transform 0.5s ease-in-out;
   transform: translateY(-100%);
 
@@ -140,6 +140,7 @@
     background: none;
     height: auto;
     padding-bottom: 0;
+    position: static;
     transform: translateY(0);
   }
 }
@@ -150,7 +151,7 @@
 
 .list {
   list-style-type: none;
-  margin: auto 0 0;
+  margin: auto 0;
   padding: 0;
 
   @include min-width(medium) {
