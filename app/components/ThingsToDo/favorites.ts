@@ -51,14 +51,14 @@ export default [
   {
     location: 'Park Slope, Brooklyn',
     title: 'Bogota Latin Bistro',
-    description: 'Great place for Colombian food in Brooklyn. Come hungry, the portions are massive',
+    description: "When Fernando craves his people's food, this is where we feast. Come hungry, the portions are masive!",
     image: 'bogota-latin-bistro',
     link: 'https://www.bogotabistro.com/',
   },
   {
     location: 'Park Slope, Brooklyn',
     title: 'Nitehawk Cinema',
-    description: "Bianca and Fernando have seen a bunch of stuff here. Their great menu changes based on what they are showing.",
+    description: "We love watching movies at this indie dine-in theater. Go for the vibes and cleverly themed menus.",
     image: 'nitehawk-cinema',
     link: 'https://nitehawkcinema.com/prospectpark/',
   },
