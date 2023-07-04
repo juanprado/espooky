@@ -40,27 +40,25 @@ const Details = (props: DetailsProps) => (
           </p>
           <h2 className={styles.subtitle}>Where</h2>
           <p className={styles.text}>
-            Radegast Hall & Biergarten<br/>
-            113 N 3rd St<br/>
-            Brooklyn, NY 11249
-          </p>
-          <div className={styles.buttonPanel}>
-            <LinkButton
-              className={clsx(styles.rsvpLink, styles.button)}
-              href="https://biancaandfernando.rsvpify.com"
-              rel="noreferrer noopener"
-            >
-              RSVP
-            </LinkButton>
-            <LinkButton
-              className={styles.button}
+            <a
+              className={styles.link}
               href="https://goo.gl/maps/5dBk33rXYhEn1StW6"
               rel="noreferrer noopener"
               target="_blank"
             >
-              Map
-            </LinkButton>
-          </div>
+              Radegast Hall & Biergarten
+            </a>
+            <br/>
+            113 N 3rd St<br/>
+            Brooklyn, NY 11249
+          </p>
+          <LinkButton
+            className={clsx(styles.rsvpLink, styles.button)}
+            href="https://biancaandfernando.rsvpify.com"
+            rel="noreferrer noopener"
+          >
+            RSVP
+          </LinkButton>
         </div>
       </div>
     </div>
