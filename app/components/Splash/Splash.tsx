@@ -9,26 +9,42 @@ type SplashProps = {
   id: string,
 }
 
-const Splash = (props: SplashProps) => {
-  const [isAnimating, setAnimation] = useState(false);
-
-  return (
-    <section
-      className={styles.root}
-      onClick={() => setAnimation(!isAnimating)}
-      id={props.id}
-      data-section={props.id}
-    >
-      <div
-        className={clsx(styles.background, { [styles.splashBackground]: isAnimating })}
-      />
-      <h1
-        className={clsx(lordish.className, styles.title, { [styles.splashTitle]: isAnimating })}
-      >
-        Bianca <br />+ Fernando
-      </h1>
-    </section>
-  );
-}
+const Splash = (props: SplashProps) => (
+  <section
+    className={styles.root}
+    id={props.id}
+    data-section={props.id}
+  >
+    <div className={styles.square13}>
+      <div className={styles.square12}>
+        <div className={styles.square11}>
+          <div className={styles.square10}>
+            <div className={styles.square9}>
+              <div className={styles.square8}>
+                <div className={styles.square7}>
+                  <div className={styles.square6}>
+                    <div className={styles.square5}>
+                      <div className={styles.square4}>
+                        <div className={styles.square3}>
+                          <div className={styles.square2}>
+                            <div className={styles.square1}>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1 className={clsx(lordish.className, styles.title)}>
+      Bianca <br />+ Fernando
+    </h1>
+  </section>
+);
 
 export default Splash;

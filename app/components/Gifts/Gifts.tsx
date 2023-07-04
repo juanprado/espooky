@@ -44,7 +44,7 @@ const Gifts = (props: GiftsProps) => (
             rel="noopener noreferrer"
           >
             Contribute
-            </LinkButton>
+          </LinkButton>
         </div>
       </div>
     </div>

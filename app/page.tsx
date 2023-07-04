@@ -7,7 +7,6 @@ import Header from 'app/components/Header';
 import Placeholder from 'app/components/Placeholder';
 import Splash from 'app/components/Splash'
 import ThingsToDo from 'app/components/ThingsToDo';
-import Splash2 from 'app/components/Splash2';
 
 export const metadata: Metadata = {
   title: 'Fernando and Bianca are getting married!',
@@ -18,8 +17,7 @@ const Home = () => (
   <>
     <Header />
     {/* The ids must match the ids in sections.ts */}
-    {/* <Splash id="splash" /> */}
-    <Splash2 id="splash" />
+    <Splash id="splash" />
     <Details id="details" />
     <AttireGallery id="attire-gallery" />
     <ThingsToDo id="things-to-do" />

@@ -1,8 +1,14 @@
 @import 'app/styles/mixins';
 
+@keyframes rotate {
+  100% {
+    transform: rotate(13deg) scale(1);
+  }
+}
+
 @keyframes splash-title {
   0% {
-    opacity: 0.2;
+    opacity: 0;
     font-size: 2.5vw;
   }
   25% {
@@ -14,24 +20,8 @@
   }
 }
 
-@keyframes splash-background {
-  0% {
-    opacity: 1;
-    transform: rotate(0deg) scale(1);
-  }
-  25% {
-    opacity: 1;
-  }
-  100% {
-    transform: rotate(90deg) scale(5.5);
-  }
-}
 
-@mixin splashy {
-  animation-duration: 1.5s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in;
-}
+$squares: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13;
 
 .root {
   @include fill-screen-height;
@@ -42,35 +32,39 @@
   transform: translateZ(0);
 }
 
-.background {
-  background-image: url('/german-expressionist-room.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  transform-origin: center;
-  width: 100%;
+@each $square in $squares {
+  .square#{$square} {
+    align-items: center;
+    animation-duration: $splash-duration;
+    animation-fill-mode: forwards;
+    animation-name: rotate;
+    animation-timing-function: ease-out;
+    display: flex;
+    height: calc(200vw + $square * 20px);
+    justify-content: center;
+    position: relative;
+    transform: rotateZ(2deg) scale(0);
+    width: calc(200vw + $square * 20px);
+
+    @if($square % 2 == 0) {
+      background: var(--bone-color);
+    } @else {
+      background: var(--dark-color);
+    }
+  }
 }
 
 .title {
+  animation-delay: $splash-duration * 0.75;
+  animation-duration: $splash-duration * 0.25;
+  animation-fill-mode: forwards;
+  // animation-timing-function: ease-in;
+  animation-name: splash-title;
   color: var(--blood-color);
   font-size: 2.5vw;
   line-height: 1;
   margin: 0;
+  opacity: 0;
+  position: absolute;
   z-index: 1;
-  opacity: 0.2;
 }
-
-.splashTitle {
-  @include splashy;
-  animation-name: splash-title;
-}
-
-.splashBackground {
-  @include splashy;
-  animation-name: splash-background;
-}
-
