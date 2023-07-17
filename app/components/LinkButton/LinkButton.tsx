@@ -17,7 +17,7 @@ const LinkButton = (props: LinkProps & LinkButtonProps) => {
 
   return (
     <Link
-      className={clsx({ [styles.light]: theme === 'dark'}, styles.root, className)}
+      className={clsx(styles.root, className, { [styles.light]: theme === 'dark'})}
       {...otherProps}
     />
   );
