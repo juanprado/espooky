@@ -51,7 +51,7 @@ export default [
   {
     location: 'Park Slope, Brooklyn',
     title: 'Bogota Latin Bistro',
-    description: "When Fernando craves his people's food, this is where we feast. Come hungry, the portions are masive!",
+    description: "When Fernando craves his people's food, this is where we feast. Come hungry, the portions are massive!",
     image: 'bogota-latin-bistro',
     link: 'https://www.bogotabistro.com/',
   },
