@@ -68,14 +68,13 @@
 }
 
 .rsvpLink {
-  background-color: var(--dark-color);
-  color: var(--bone-color);
-  // margin-bottom: toRem(16);
+  background-color: var(--dark-color) !important;
+  color: var(--bone-color) !important;
 
   &:hover, &:focus {
-    background-color: var(--bone-color);
-    color: var(--dark-color);
-    border-color: var(--dark-color);
+    background-color: var(--bone-color) !important;
+    color: var(--dark-color) !important;
+    border-color: var(--dark-color) !important;
   }
 }
 
