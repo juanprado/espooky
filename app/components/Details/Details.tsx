@@ -46,19 +46,22 @@ const Details = (props: DetailsProps) => (
               rel="noreferrer noopener"
               target="_blank"
             >
-              Radegast Hall & Biergarten
+              The Bier Haus at Radegast Hall
             </a>
             <br/>
             113 N 3rd St<br/>
             Brooklyn, NY 11249
           </p>
           <LinkButton
-            className={clsx(styles.rsvpLink, styles.button)}
+            className={styles.rsvpLink}
             href="https://biancaandfernando.rsvpify.com"
             rel="noreferrer noopener"
           >
             RSVP
           </LinkButton>
+          <p className={styles.disclaimer}>
+            Please note this is an adults-only celebration
+          </p>
         </div>
       </div>
     </div>

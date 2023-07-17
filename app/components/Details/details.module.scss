@@ -70,10 +70,18 @@
 .rsvpLink {
   background-color: var(--dark-color);
   color: var(--bone-color);
+  // margin-bottom: toRem(16);
 
   &:hover, &:focus {
     background-color: var(--bone-color);
     color: var(--dark-color);
     border-color: var(--dark-color);
   }
+}
+
+.disclaimer {
+  font-size: toRem(14);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  margin-top: toRem(16);
 }
