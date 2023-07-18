@@ -10,7 +10,7 @@ import ThingsToDo from 'app/components/ThingsToDo';
 
 export const metadata: Metadata = {
   title: 'Fernando and Bianca are getting married!',
-  description: 'Fernando and Bianca are getting married, details are coming soon!',
+  description: 'Fernando and Bianca are getting married!',
 };
 
 const Home = () => (
