@@ -114,7 +114,7 @@ const Header = () => {
               scroll={false}
               onClick={() => toggleNav(false)}
             >
-              Attire Gallery
+              Attire Theme
             </SmoothScrollLink>
           </li>
           <li className={styles.item}>
